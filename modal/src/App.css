@@ -1,0 +1,25 @@
+.modal-dialog {
+  min-width: 800px !important;
+}
+
+.modal-header .modal-title {
+  color: #ffff;
+}
+
+.icon-close {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal-header .btn-close {
+  padding: .5rem;
+  margin: -.5rem -.5rem -.5rem auto;
+}
+
+.btn-close {
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: .25em;
+  color: #ffff !important;
+}
