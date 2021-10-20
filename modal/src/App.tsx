@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+
 import "./App.css";
 
 function App() {
@@ -31,7 +32,6 @@ function App() {
           </Button>
         </Modal.Footer>
       </Modal>
-
     </div>
   );
 }

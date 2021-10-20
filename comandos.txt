@@ -1,3 +1,16 @@
 npx create-react-app modal --template typescript
 
 yarn add react-bootstrap bootstrap
+
+//arrastar listas
+yarn add react-beautiful-dnd
+
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+
+https://cibersistemas.pt/tecnologia/como-adicionar-arrastar-e-soltar-no-react-com-react-beautiful-dnd/
+
+
+
+https://jsfiddle.net/16j1se1q/1/
+https://www.ti-enxame.com/pt/javascript/bootstrap-modal-no-react.js/1051374324/
+https://qastack.com.br/programming/20926551/recommended-way-of-making-react-component-div-draggable
