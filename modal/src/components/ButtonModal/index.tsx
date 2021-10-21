@@ -1,29 +1,32 @@
 import { useState } from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import Draggable from "react-draggable";
-import MoveModal from "../MoveModal";
+import FormModal from "../FormModal";
+import FormViaCep from "../FormViaCep";
 
 const ButtonModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => {
-    debugger;
     setIsModalOpen(true);
-
-    if (isModalOpen) {
-      debugger;
-    } else {
-      debugger;
-    }
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
   };
 
+  const [isModalCep, setIsModalCep] = useState(false);
+  const openModalCep = () => {
+    setIsModalCep(true);
+  };
+
+
   return (
     <>
-      <Button onClick={openModal}>Show Modal</Button>
-      {isModalOpen && (
+      <Button onClick={openModal}>Show Modal 1</Button>
+      <br/>
+      <br/>
+      <Button onClick={openModalCep}>Show Modal 2</Button>
+      {(isModalOpen ? isModalOpen : isModalCep) && (
         <>
           <div className="space">
             <Draggable grid={[10, 10]} axis="both" bounds="parent">
@@ -38,7 +41,15 @@ const ButtonModal = () => {
                         onClick={closeModal}
                       ></button>
                     </div>
-                    <div className="modal-body">Modal Body</div>
+                    <div className="modal-body">
+                      Modal Body
+                      {isModalOpen &&
+                      <FormModal />
+                      }
+                      {isModalCep &&
+                      <FormViaCep />
+                      }
+                      </div>
                     <div className="modal-footer">
                       <button
                         type="button"
